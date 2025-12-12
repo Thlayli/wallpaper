@@ -18,7 +18,7 @@ export async function getWallpaper() {
 	return stdout.trim();
 }
 
-export async function setWallpaper(imagePath, {scale = 'fill'} = {}) {
+export async function setWallpaper(imagePath, {scale = 'fill'} = {}, {monitor = 0} = {}) {
 	if (typeof imagePath !== 'string') {
 		throw new TypeError('Expected a string');
 	}
@@ -28,6 +28,8 @@ export async function setWallpaper(imagePath, {scale = 'fill'} = {}) {
 		path.resolve(imagePath),
 		'--scale',
 		scale,
+		'--monitor',
+		monitor,
 	];
 
 	await execFile(binary, arguments_);
