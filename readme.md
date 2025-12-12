@@ -59,15 +59,16 @@ The path to the image to set as the desktop wallpaper.
 
 Type: `object`
 
-##### screen *(macOS only)*
+##### screen *(macOS & Windows)*
 
 Type: `string | number`\
-Values: `'all'`, `'main'`, or the index of a screen from `.screens()`
+macOS Values: `'all'`, `'main'`, or the index of a screen from `.screens()`
+Windows Values: the index of a screen from `.screens()`
 Default: `'all'`
 
 The screen to set the wallpaper on.
 
-*On Linux and Windows it's hard-coded to `'main'`.*
+*On Linux it's hard-coded to `'main'`.*
 
 ##### scale *(macOS & Windows)*
 
