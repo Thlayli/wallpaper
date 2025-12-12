@@ -62,8 +62,8 @@ Type: `object`
 ##### screen *(macOS & Windows)*
 
 Type: `string | number`\
-macOS Values: `'all'`, `'main'`, or the index of a screen from `.screens()`
-Windows Values: the index of a screen from `.screens()`
+macOS Values: `'all'`, `'main'`, or the index of a screen from `.screens()`\
+Windows Values: the index of a screen from `.screens()`\
 Default: `'all'`
 
 The screen to set the wallpaper on.
