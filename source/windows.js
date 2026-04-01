@@ -28,9 +28,11 @@ export async function setWallpaper(imagePath, {scale = 'fill', screen } = {}) {
 		path.resolve(imagePath),
 		'--scale',
 		scale,
-		'--monitor',
-		screen,
 	];
 
+	if (screen !== undefined) {
+        arguments_.push('--monitor', screen);
+    }
+	
 	await execFile(binary, arguments_);
 }
